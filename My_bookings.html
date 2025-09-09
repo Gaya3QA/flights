@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking Application</title>
+    <link rel="stylesheet" href="Style_sheet.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flight Booking Application</h1>
+
+        <!-- User Registration Form -->
+        <div class="form-container">
+            <h2>Register New User</h2>
+            <input type="text" id="username" placeholder="Enter username">
+            <input type="email" id="email" placeholder="Enter Email">
+            <input type="number" id="phone" placeholder="Enter phone">
+            <button onclick="registerUser()">Register</button>
+        </div>
+
+        <!-- List Flights Section -->
+        <div class="form-container">
+            <h2>Available Flights</h2>
+            <select id="flight-list"></select>
+            <button onclick="getAllFlights()">View Flights</button>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="form-container">
+            <h2>Book Flight</h2>
+            <label for="user-id">User ID:</label>
+            <input type="text" id="user-id" placeholder="Enter user ID">
+
+            <label for="flight-id">Flight ID:</label>
+            <select id="flight-id"></select>
+
+              <!-- Departure Date -->
+        <label for="departure">Departure Date:</label>
+        <input type="date" id="departure" name="departure" placeholder="Departure">
+       
+        <!-- Return Date -->
+        <label for="arrival123">Return Date:</label>
+        <input type="date" id="arrival" name="return" placeholder="Return">
+
+        <label for="seats">Seats:</label>
+        <input type="number" id="seats" placeholder="Number of seats">
+
+            <button onclick="createBooking()">Book Flight</button>
+        </div>
+
+        <!-- View Bookings Section -->
+        <div class="form-container">
+            <h2>Your Bookings</h2>
+            <button onclick="getUserBookings()">View Your Bookings</button>
+            <div id="user-bookings"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
